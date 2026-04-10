@@ -73,3 +73,13 @@
 .circle-para {
     font-size: 13px;
 }
+.outline-input  {
+    outline: none;
+}
+.fonts-badge {
+    /* font-size:22px; */
+    background-color:rgb(79, 209, 27)  ;
+}
+.fonts-badges{
+    font-size:14px;
+}

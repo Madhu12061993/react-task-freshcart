@@ -9,18 +9,29 @@ const FreshCart = () => {
                     <p className="fs-4 fresh-font"> <i className="bi bi-cart4"></i></p>
                     <h3 className='ps-2 fw-bolder'>FreshCart</h3>
                 </div>
-                <div>
-                    <div className='border border-2 '>
-                        <input className='border-0 ' type="text" placeholder="Search for products " />
-                        <i className="bi bi-search"></i>
-
+                <div className='col-6 d-flex gap-2'>
+                    <div className='border  border-2 rounded-4  w-100 d-flex justify-content-between text-center '>
+                        <input className='border-0 ps-3 outline-input ' type="text" placeholder="Search for products " />
+                        <p className='pt-3 pe-4'><i className="bi bi-search"></i></p>
                     </div>
-                    <button> <i className="bi bi-geo-alt"></i> Location</button>
+                    <div>
+                        <button className='d-flex mt-2 p-2 px-4 gap-2 rounded-3'> <i className="bi bi-geo-alt"></i> Location</button>
+                    </div>
                 </div>
-                <div className="d-flex">
-                    <p><i className="bi bi-suit-heart"></i></p>
-                    <p><i className="bi bi-person"></i></p>
-                    <p><i className="bi bi-bag"></i></p>
+                <div className="d-flex gap-3">
+                    <p className='fs-5 position-relative'><i className="bi bi-suit-heart">
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill fonts-badge">
+                            5
+                            <span className="visually-hidden">unread messages</span>
+                        </span>
+                    </i></p>
+                    <p className='fs-5'><i className="bi bi-person"></i></p>
+                    <p className='fs-5 position-relative'><i className="bi bi-bag">
+                        <span className="position-absolute fonts-badge top-0 start-100 translate-middle badge rounded-pill">
+                            1
+                            <span className="visually-hidden">unread messages</span>
+                        </span>
+                    </i></p>
 
                 </div>
             </div>

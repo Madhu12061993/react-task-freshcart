@@ -13,7 +13,8 @@ import dairyBread from '../assets/featured/1/category-dairy-bread-eggs.jpg';
 const FeatureCarousal = () => {
   return (
    <>
-   <h4>Featured Categories</h4>
+   <div className='mt-5'>
+ <h4>Featured Categories</h4>
    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-inner">
     <div className="carousel-item active">
@@ -35,6 +36,8 @@ const FeatureCarousal = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+   </div>
+  
    </>
   )
 }
