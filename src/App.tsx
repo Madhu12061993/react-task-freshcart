@@ -4,7 +4,7 @@ import BestSells from './component/BestSells'
 import FeatureCarousal from './component/FeatureCarousal'
 import Final from './component/Final'
 import FreshCart from './component/FreshCart'
-// import LastAll from './component/LastAll'
+import LastAll from './component/LastAll'
 import Navbr from './component/Navbr'
 import PopularProducts from './component/PopularProducts'
 import Shop from './component/Shop'
@@ -23,7 +23,7 @@ function App() {
         <BestSells />
         <Final />
       </div>
-      {/* <LastAll /> */}
+      <LastAll />
     </>
   )
 }
