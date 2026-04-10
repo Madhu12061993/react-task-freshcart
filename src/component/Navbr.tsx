@@ -8,7 +8,7 @@ const Navbr = () => {
                 <nav className="navbar navbar-light  ">
                     <div className="container-fluid d-flex ">
 
-                        <button className="navbar-brand fs-6 fonts-badge text-white d-flex gap-2 px-4 py-2 rounded-3 border-0" >  <i className="bi bi-ui-checks-grid"></i> All Departments</button>
+                        <button className="navbar-brand fs-6 btn-cick text-white d-flex gap-2 px-4 py-2 rounded-3 border-0" >  <i className="bi bi-ui-checks-grid"></i> All Departments</button>
 
                         <p className='m-0 px-0'> <a className="navbar-brand " href="#"><span className='fonts-badges'>Home <i className="bi bi-chevron-down"></i></span> </a></p>
                         <p className='m-0 px-0'> <a className="navbar-brand fonts-badges" href="#"><span className='fonts-badges'>Shop <i className="bi bi-chevron-down"></i></span> </a></p>
