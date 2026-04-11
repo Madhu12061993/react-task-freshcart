@@ -1,5 +1,6 @@
 import './App.css'
 import BestSells from './component/BestSells'
+import Carousal from './component/Carousal'
 // import Carousal from './component/Carousal'
 import FeatureCarousal from './component/FeatureCarousal'
 import Final from './component/Final'
@@ -16,7 +17,8 @@ function App() {
       <div className="container">
         <FreshCart />
         <Navbr />
-        {/* <Carousal/> */}
+        <hr/>
+        <Carousal/>
         <FeatureCarousal />
         <Shop />
         <PopularProducts />

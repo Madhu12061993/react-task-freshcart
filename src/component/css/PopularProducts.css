@@ -1,7 +1,7 @@
 .stale {
-    position: relative;
+    position: absolute;
     left: 15px;
-    top: 15px;
+    top: 13px;
     z-index: 1;
 }
 
@@ -111,6 +111,7 @@
 
 .fonts-badges {
     font-size: 14px;
+    
 }
 .search-box {
     height: 40px;

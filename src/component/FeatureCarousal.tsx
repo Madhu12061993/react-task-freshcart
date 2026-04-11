@@ -1,6 +1,6 @@
 import dairyBread from '../assets/featured/1/category-dairy-bread-eggs.jpg';
-// import corn  from "../assets/featured/1/category-instant-food.jpg";
-// import oreoBuiscut from "../assets/featured/1/category-bakery-biscuits.jpg";
+import corn  from "../assets/featured/1/category-instant-food.jpg";
+import oreoBuiscut from "../assets/featured/1/category-bakery-biscuits.jpg";
 // import lays from "../assets/featured/1/category-snack-munchies.jpg";
 // import atta from "../assets/featured/2/category-atta-rice-dal.jpg";
 // import pampers from "../assets/featured/2/category-baby-care.jpg";
@@ -21,10 +21,10 @@ const FeatureCarousal = () => {
       <img src={dairyBread} className="d-block w-50" alt="dairyBread"/>
     </div>
     <div className="carousel-item">
-      <img src={dairyBread} className="d-block w-50" alt="dairyBread"/>
+      <img src={corn} className="d-block w-50" alt="dairyBread"/>
     </div>
     <div className="carousel-item">
-      <img src={dairyBread} className="d-block w-50" alt="dairyBread"/>
+      <img src={oreoBuiscut} className="d-block w-50" alt="dairyBread"/>
     </div>
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

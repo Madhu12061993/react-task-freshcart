@@ -13,7 +13,7 @@ const BestSells = () => {
         <div className="row row-cols-1 row-cols-md-4 g-4 mt-2">
           {/* col-1 */}
           <div className="col ">
-            <div className="card custom-card w-100">
+            <div className="card custom-card h-100 w-100">
               <img src={coffeeBeans} className="card-img-top" alt="coffeeBeans" />
               <div className="card-img-overlay ms-4 text-white d-flex flex-column ">
                 <h6 className="card-title fs-4  fw-bolder">100% Organic Coffee Beans.</h6>
