@@ -122,8 +122,10 @@
 .label-font {
     font-size: 11px;
 }
-.overlayPosition {
-    position: absolute;
-    /* left: 100px; */
-    top: 500px;
+
+.overlayPositin {
+    position:relative;
+    top:500px;
+    margin-top: 100px;
+    margin-left: 50px;
 }
