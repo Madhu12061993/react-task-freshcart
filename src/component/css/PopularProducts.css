@@ -119,3 +119,11 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.label-font {
+    font-size: 11px;
+}
+.overlayPosition {
+    position: absolute;
+    /* left: 100px; */
+    top: 500px;
+}
