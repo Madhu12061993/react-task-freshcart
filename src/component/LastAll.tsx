@@ -7,11 +7,16 @@ import insta from '../assets/last/insta1.png';
 import america from '../assets/last/images1.png';
 import twitter from '../assets/last/twitter.jpg';
 import './css/PopularProducts.css';
+import { useState } from 'react';
 
 
 const LastAll = () => {
+    const [isHovered , setisHovered] = useState(false);
+
+
     return (
         <>
+        
             <div className="container-fluid container-color">
                 <div className="container">
                     <div className="row">

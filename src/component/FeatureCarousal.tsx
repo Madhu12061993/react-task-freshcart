@@ -60,7 +60,13 @@ const datas: Carousal[] = [{
 const dataArr = (arr: Carousal[], size: number) => {
   const result: Carousal[][] = [];
   for (let i = 0; i < arr.length; i += size) {
-    result.push(arr.slice(i, i + size));
+    let chunk = arr.slice(i, i + size);
+    
+    if (chunk.length < size && result.length > 0) {
+      const prev = result[result.length - 1];
+      chunk = [...prev.slice(size-(size-chunk.length)) , ...chunk];
+    }
+    result.push(chunk);
   }
   return result;
 }
@@ -99,16 +105,17 @@ const FeatureCarousal = () => {
       </div>
       <div className='position-relative start-0 end-0 d-flex gap-2 mt-2 me-2'>
         <button className="carousel-control-prev  bg-info" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button className="carousel-control-next bg-info " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span className="carousel-control-next-icon  " aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-</div>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
+        </button>
+        <button className="carousel-control-next bg-info " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span className="carousel-control-next-icon  " aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
+        </button>
+      </div>
     </>
   )
 }
 
 export default FeatureCarousal
+
