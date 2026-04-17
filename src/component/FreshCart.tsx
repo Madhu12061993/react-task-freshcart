@@ -11,7 +11,7 @@ const FreshCart = () => {
                     </p>
                     <h3 className='ps-2 fw-bolder'>
                         FreshCart
-                    </h3>
+                     </h3>
                 </div>
                 <div className='col-6 d-flex gap-2'>
                     <div

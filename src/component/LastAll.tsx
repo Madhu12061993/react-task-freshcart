@@ -1,29 +1,83 @@
 import googlepay from '../assets/last/google pay.png';
 import appstore from '../assets/last/appstore.jpg';
 import amazonpay from '../assets/last/amazonpay.webp';
-import facebook from '../assets/last/fb-4.webp';
 import paypal from '../assets/last/PayPal.jpg';
-import insta from '../assets/last/insta1.png';
 import america from '../assets/last/images1.png';
-import twitter from '../assets/last/twitter.jpg';
 import './css/PopularProducts.css';
 import { useState } from 'react';
 
 
+
+// const Catagories1 = [
+//     "Vegetables & Fruits",
+//     "Breakfast & instant food",
+//     "Bakery & Biscuits",
+//     "Atta, rice & dal",
+//     "Sauces & spreads",
+//     "Organic & gourmet",
+//     "Baby care",
+//     "Cleaning essentials",
+//     "Personal care",
+// ]
+// const Catagories2 = [
+//     "Dairy, bread & eggs",
+//     "Cold drinks & juices",
+//     "Tea, coffee & drinks",
+//     "Masala, oil & more",
+//     "Chicken, meat & fish",
+//     "Paan corner",
+//     "Pharma & wellness",
+//     "Home & office",
+//     "Pet care"
+// ]
+// const Catagories = [Catagories1, Catagories2]
+// const Company = [
+//     "Company",
+//     "About",
+//     "Blog",
+//     "Help Center",
+//     "Our Value"
+// ]
+// const Consumer = [
+//     "Payments",
+//     "Shipping",
+//     "Product Returns",
+//     "FAQ",
+//     "Shop Checkout",
+// ]
+// const Shopper = [
+//     "Shopper Opportunities",
+// "Become a Shopper",
+// "Earnings",
+// "Ideas & Guides",
+// "New Retailers",
+// ]
+// const FreshCart = [
+//     "Freshcart programs",
+// "Gift Cards",
+// "Promos & Coupons",
+// "Freshcart Ads",
+// "Careers",
+// ]
+// const footerSection = [
+//     {title:"Get to know us" , items:Company},
+//     {title:"For Consumers" ,items:Consumer},
+//     {title:"Become a Shopper" , items:Shopper},
+//     {title:"Freshcart programs" , items:FreshCart},
+// ];
 const LastAll = () => {
-    const [isHovered , setisHovered] = useState(false);
+    const [isHovered, setisHovered] = useState(false);
 
 
     return (
         <>
-        
             <div className="container-fluid container-color">
                 <div className="container">
                     <div className="row">
                         <div className="col">
                             <p className="para-txt  fw-bolder">Categories</p>
                             <div className="row">
-                                <div className="col para-txt ">
+                                <div className="col para-txt " onMouseEnter={() => setisHovered(true)} onMouseLeave={() => setisHovered(false)}>
                                     <p >Vegetables & Fruits</p>
                                     <p>Breakfast & instant food</p>
                                     <p>Bakery & Biscuits</p>
@@ -80,7 +134,7 @@ const LastAll = () => {
                             <p>Careers</p>
                         </div>
                     </div>
-                    <hr/>
+                    <hr />
                     <div className="row">
                         <div className="col payment d-flex gap-2 text-center align-items-center">
                             <p className='mt-3 font-para'>Payment Partners</p>
@@ -96,17 +150,20 @@ const LastAll = () => {
                             <img src={googlepay} alt="googlepay" />
                         </div>
                     </div>
-                    <hr/>
+                    <hr />
                     <div className="row mt-2">
                         <div className="col d-flex gap-2">
                             <i className="bi bi-c-circle"></i>
-                            <p className='circle-para text-muted' > 2022 - 2026 FreshCart eCommerce HTML Template. All rights reserved. Powered by <span className='policy '>Codescandy.</span></p>
+                            <p className='circle-para text-muted' > 2022 - 2026 FreshCart eCommerce HTML Template. All rights reserved. Powered by
+                                 <span className={`policy ${isHovered?"text-success":""}`}
+                                 onMouseEnter={() => setisHovered(true)}
+                                 onMouseLeave={() => setisHovered(false)}> Codescandy.</span></p>
                         </div>
                         <div className="col social d-flex gap-2 justify-content-end">
-                            <p className='circle-para mt-2 text-muted'>Follow us on</p>
-                            <img src={facebook} alt="facebook" />
-                            <img src={twitter} alt="twitter" />
-                            <img src={insta} alt="insta" />
+                            <p className='circle-para mt-3 text-muted'>Follow us on</p>
+                            <div className="card  rounded-2 align-self-center"><i className =" px-2 py-1 text-muted bi bi-facebook"></i></div>
+                            <div className="card rounded-2 align-self-center"><i className ="px-2 py-1 text-muted  bi bi-twitter"></i></div>
+                            <div className="card rounded-2 align-self-center"><i className ="px-2 py-1 text-muted bi bi-instagram"></i></div>
                         </div>
                     </div>
 
@@ -119,18 +176,3 @@ const LastAll = () => {
 }
 
 export default LastAll;
-{/* <div className="col">
-                           
-                        </div>
-                        <div className="col>
-                            
-                        </div>
-                        </div>
-                       
-                    </div>
-                    <div className="col-2">dff</div>
-                    <div className="col-2">df</div>
-                    <div className="col-2">vv</div>
-                    <div className="col-2">cc</div>
-                </div>
-            </div> */}
