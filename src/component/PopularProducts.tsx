@@ -9,7 +9,8 @@ import cheese from '../assets/products/product-img-9.jpg';
 import epigamia from '../assets/products/product-img-8.jpg';
 import lays from '../assets/products/product-img-4.jpg';
 import fivestar from '../assets/products/product-img-3.jpg';
-
+import { useState } from 'react';
+import "./popularProductsHovered"
 
 
 const data = [
@@ -108,6 +109,7 @@ const data = [
     },
 ]
 const PopularProducts = () => {
+    const [isHovered , setisHovered] = useState(false);
     return (
         <>
             <div className='my-5 pt-5'>
@@ -115,8 +117,33 @@ const PopularProducts = () => {
                 <div className="row row-cols-1 row-cols-md-5 g-4 mt-1">
                     {/* col-1-sev */}
                     {data.map((item, index) => (
-                        <div key={index} className="col">
-                            <div className="card  rounded-3">
+                        <div key={index} className="col " 
+                        onMouseEnter={() => setisHovered(true)}
+                        onMouseLeave={() => setisHovered(false)}>
+                            {isHovered === true ? (
+                                 <div className="card  rounded-3 border border-success">
+                                <div className='w-100 d-block ' >
+                                    <span className=' badge bg-danger stale '>{item.text}</span>
+                                    <PopularProductsHovered/>                                    
+                                </div>
+                                <img src={item.imgUrl} className="card-img-top m-0 imgSize " alt="sev" />
+                                <div className="card-body  m-0">
+                                    <p className="card-text text-muted m-0 fontChange" >{item.subTitle}</p>
+                                    <p className="card-title text-bold fw-bolder fontChange body m-0 ">{item.title}</p>
+                                    <p className='mt-2 fontChange'><i className="bi bi-star-fill text-warning "></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <span className='text-muted'>{item.starValue}</span> </p>
+                                    <div className='d-flex justify-content-between '>
+                                        <div>
+                                            <span className='fw-bolder fontChange'><i className="bi bi-currency-dollar"></i>{item.dallarValue}</span>
+                                            {item.dallarNumber ? <span className='text-muted m-0 fontChange'><i className="bi bi-currency-dollar "></i>{item.dallarNumber}</span> : ""}
+                                        </div>
+                                        <div>
+                                            <button className='addbtn m-0 text-white fw-800'> <i className="bi bi-plus"></i> {item.button}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            ) : (
+                                 <div className="card  rounded-3">
                                 <div className='w-100 d-block ' >
                                     <span className=' badge bg-danger stale '>{item.text}</span>
                                 </div>
@@ -136,6 +163,8 @@ const PopularProducts = () => {
                                     </div>
                                 </div>
                             </div>
+                            )}
+                           
                         </div>
                     ))}
 
@@ -148,6 +177,26 @@ const PopularProducts = () => {
 
 export default PopularProducts;
 
+//  <div className="card  rounded-3">
+//                                 <div className='w-100 d-block ' >
+//                                     <span className=' badge bg-danger stale '>{item.text}</span>
+//                                 </div>
+//                                 <img src={item.imgUrl} className="card-img-top m-0 imgSize " alt="sev" />
+//                                 <div className="card-body  m-0">
+//                                     <p className="card-text text-muted m-0 fontChange" >{item.subTitle}</p>
+//                                     <p className="card-title text-bold fw-bolder fontChange body m-0 ">{item.title}</p>
+//                                     <p className='mt-2 fontChange'><i className="bi bi-star-fill text-warning "></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <span className='text-muted'>{item.starValue}</span> </p>
+//                                     <div className='d-flex justify-content-between '>
+//                                         <div>
+//                                             <span className='fw-bolder fontChange'><i className="bi bi-currency-dollar"></i>{item.dallarValue}</span>
+//                                             {item.dallarNumber ? <span className='text-muted m-0 fontChange'><i className="bi bi-currency-dollar "></i>{item.dallarNumber}</span> : ""}
+//                                         </div>
+//                                         <div>
+//                                             <button className='addbtn m-0 text-white fw-800'> <i className="bi bi-plus"></i> {item.button}</button>
+//                                         </div>
+//                                     </div>
+//                                 </div>
+//                             </div>
 
 
 

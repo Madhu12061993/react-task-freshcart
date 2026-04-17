@@ -149,3 +149,16 @@
 .payment img ,.paments img {
     cursor: pointer;
 }
+.card-index{
+    z-index: 2;
+}
+.card-position {
+    position: absolute;
+   left: 75px;
+   bottom: 360px;
+   z-index: 1;
+}
+.card-icon-hover:hover {
+    background-color: green;
+    color: white;
+}
