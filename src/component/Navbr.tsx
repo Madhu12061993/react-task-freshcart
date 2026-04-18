@@ -1,13 +1,22 @@
+import { useState } from 'react';
 import './css/PopularProducts.css';
+import NavbarHovered from './hovered/NavbarHovered';
 
 
 const Navbr = () => {
+    const [isHovered , setisHovered] = useState(false);
     return (
         <nav className="navbar navbar-light  ">
             <div className="container-fluid d-flex flex-row justify-content-start ">
 
-                <button className="navbar-brand fs-6 btn-cick text-white d-flex gap-2 px-4 py-2 rounded-3 border-0" >
-                    <i className="bi bi-ui-checks-grid"></i> All Departments</button>
+                <button 
+                className="navbar-brand fs-6 btn-cick text-white d-flex gap-2 px-4 py-2 rounded-3 border-0"
+                onMouseEnter={() => setisHovered(true)}
+                onMouseLeave={() => setisHovered(false)} >
+                    <i className="bi bi-ui-checks-grid"></i> 
+                    All Departments
+                    {isHovered  && <div className='hover-position'><NavbarHovered /></div>}
+                    </button>
 
                 <a className="navbar-brand " href="#">
                     <span className='fonts-badges'>Home

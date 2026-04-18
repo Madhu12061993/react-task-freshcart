@@ -9,6 +9,7 @@ import teaCoffee from "../assets/featured/2/category-tea-coffee-drinks.jpg";
 import surfExcel from "../assets/featured/3/category-cleaning-essentials.jpg";
 import pet from "../assets/featured/3/category-pet-care.jpg";
 import Carousal from './Carousal';
+import { useState } from 'react';
 
 
 interface Carousal {
@@ -73,6 +74,7 @@ const dataArr = (arr: Carousal[], size: number) => {
 
 const groupData = dataArr(datas, 4);
 const FeatureCarousal = () => {
+  const [isHovered , setisHovered] = useState(false);
   return (
     <>
 
@@ -86,7 +88,9 @@ const FeatureCarousal = () => {
                 <div className='row row-cols-1 row-cols-md-4  '>
                   {group.map((item, index) => (
                     <div key={index} className="col">
-                      <div className="card">
+                      <div className={`card ${isHovered ? "border-success" : ""}`}
+                       onMouseEnter={() => setisHovered(true)} 
+                       onMouseLeave={() => setisHovered(false)}>
                         <figure className="figure text-center ">
                           <img src={item.imagUrl} className="figure-img img-fluid rounded" alt={item.title} />
                           <figcaption className="figure-caption">{item.title}</figcaption>

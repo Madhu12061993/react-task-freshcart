@@ -4,7 +4,7 @@ import groundcoffee from '../assets/bestsells/sell-2.jpg';
 import crushedTomatoes from '../assets/bestsells/sell-3.jpg';
 import pineapple from '../assets/bestsells/sell-4.jpg';
 import './css/PopularProducts.css';
-import BestSellHovered from './BestSellHovered';
+import BestSellHovered from './hovered/BestSellHovered';
 
 const data = [
   {

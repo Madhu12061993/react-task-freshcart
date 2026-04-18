@@ -119,8 +119,20 @@
 .btn-cick {
     background-color: rgb(79, 209, 27);
     font-size: 13px;
-
+    /* position: relative; */
 }
+
+/* hover class */
+/* .hover-position {
+position: relative;
+top: 100px;
+z-index:1;
+} */
+
+/* .hover-childPosition {
+    position: relative;
+    top: 100px; */
+/* } */
 
 .fonts-badges {
     font-size: 14px;
@@ -172,3 +184,7 @@
     background-color: green;
     color: white;
 }
+/* .my-tooltip {
+    border-radius: 50%;
+} */
+

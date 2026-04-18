@@ -10,7 +10,7 @@ import epigamia from '../assets/products/product-img-8.jpg';
 import lays from '../assets/products/product-img-4.jpg';
 import fivestar from '../assets/products/product-img-3.jpg';
 import { useState } from 'react';
-import PopularProductsHovered from './popularProductsHovered';
+import PopularProductsHovered from './PopularProductsHovered';
 
 const data = [
     {
