@@ -162,3 +162,13 @@
     background-color: green;
     color: white;
 }
+.card-positions {
+    position: absolute;
+   left: 45px;
+   bottom: 180px;
+   z-index: 1;
+}
+.card-icons-hover:hover {
+    background-color: green;
+    color: white;
+}
