@@ -119,16 +119,28 @@
 .btn-cick {
     background-color: rgb(79, 209, 27);
     font-size: 13px;
-    /* position: relative; */
+    position: relative;
 }
 
 /* hover class */
-/* .hover-position {
-position: relative;
-top: 100px;
-z-index:1;
-} */
+.hover-position {
+position: absolute;
+top: 40px;
+left:0px;
+z-index:2;
+}
 
+.hover-background {
+    background-color: rgb(148, 153, 158);
+}
+.hover-childPosition button small {
+    font-weight: 600;
+}
+
+/* navbar home */
+.Hover-position-home {
+    position: absolute;
+}
 /* .hover-childPosition {
     position: relative;
     top: 100px; */

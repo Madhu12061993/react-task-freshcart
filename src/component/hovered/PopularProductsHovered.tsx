@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 import * as bootstrap from "bootstrap"; 
-import "./css/PopularProducts.css"
-
+import "../css/PopularProducts.css";
 const PopularProductsHovered = () => {
   useEffect(() => {
   const tooltipTriggerList = document.querySelectorAll(
