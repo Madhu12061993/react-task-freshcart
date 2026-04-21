@@ -171,38 +171,54 @@ export const MegaMenu = () => {
 
   return (
     <>
-      <div className="container-fluid bg-info d-flex justify-content-between "
-        onMouseEnter={() => setisHovered(true)}
-        onMouseLeave={() => setisHovered(false)}>
-        <div className="col mt-4">
-          <button className="border-0 menu-button">Dairy, Bread & Eggs</button>
-          {menuEggs.map((item, index) => (
-            <div>
-              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
-            </div>
-          ))}
+      <div className="card border-0">
+        <div className="container-fluid bg-white "
+          onMouseEnter={() => setisHovered(true)}
+          onMouseLeave={() => setisHovered(false)}>
+          <div className=" d-flex justify-content-between m-4">
+            <div className="col  mt-4">
+              <p className="border-0 menu-button m-0 m-1">Dairy, Bread & Eggs</p>
+              {menuEggs.map((item, index) => (
+                <div className="menu-lineheight" >
+                  <button key={index} className={`border-0 ${isHovered ? "text-success hover-background" : "bg-white"}`}>{item}</button>
+                </div>
+              ))}
 
-        </div>
-        <div className="col mt-4">
-          <button className="border-0 menu-button">Breakfast & Instant Food</button>
-          {menuBreakfast.map((item, index) => (
-            <div>
-              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
             </div>
-          ))}
-        </div>
-        <div className="col mt-4">
-          <button className="border-0 menu-button">Cold Drinks & Juices</button>
-          {menuDrinks.map((item, index) => (
-            <div>
-              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
+            <div className="col mt-4 ">
+              <p className="border-0 menu-button m-0 m-1">Breakfast & Instant Food</p>
+              {menuBreakfast.map((item, index) => (
+                <div className="menu-lineheight">
+                  <button key={index} className={`border-0 ${isHovered ? "text-success hover-background" : "bg-white"}`}>{item}</button>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <div className="col menu-img">
-          <img src={vegetableBasket} alt="vegetableBasket" />
+            <div className="col mt-4 ">
+              <p className="border-0 menu-button  m-0 m-1">Cold Drinks & Juices</p>
+              {menuDrinks.map((item, index) => (
+                <div className="menu-lineheight">
+                  <button key={index} className={`border-0 ${isHovered ? "text-success hover-background" : "bg-white"}`}>{item}</button>
+                </div>
+              ))}
+            </div>
+            <div className="col menu-img mt-4">
+              <div className="card bg-dark text-white border-0 ">
+                <img src={vegetableBasket} className="card-img" alt="vegetableBasket" />
+                <div className="card-img-overlay d-flex justify-content-between mt-3 mx-2">
+                  <div>
+                   <p className="card-title text-dark menu-title">Dont miss this <br/> offer today.</p>
+                    <button className="border-0 rounded-2 p-1 px-3 fw-bolder text-white menu-btn-bg mt-1 text-center"><small>Shop Now</small></button>
+                  </div>
+                  <div className="menu-img-color">
+                    <p className="card-text text-dark  p-3 ">25% <br/> Off </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
     </>
   );
 };

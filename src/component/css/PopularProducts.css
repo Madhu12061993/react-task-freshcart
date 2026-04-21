@@ -6,7 +6,7 @@
 }
 
 .addbtn {
-    background-color: rgb(79, 209, 27);
+    background-color: rgb(9, 147, 9);
     border: none;
     border-radius: 4px;
 }
@@ -16,7 +16,7 @@
 }
 
 .bgclor {
-    background-color: rgb(79, 209, 27);
+    background-color: rgb(9, 147, 9);
 }
 
 .fntsze {
@@ -36,7 +36,7 @@
 
 .bootstrap-iconeer {
     font-size: 40px;
-    color: rgb(79, 209, 27);
+    color: rgb(9, 147, 9);
 }
 
 .best-sell {
@@ -54,7 +54,7 @@
 }
 
 .policy {
-    color: rgb(79, 209, 27);
+    color:rgb(9, 147, 9);
     cursor: pointer;
 }
 
@@ -102,7 +102,7 @@
 
 /* freshcart */
 .fresh-font {
-    color: rgb(79, 209, 27);
+    color: rgb(9, 147, 9);
 }
 
 .outline-input {
@@ -111,13 +111,13 @@
 
 .fonts-badge {
     /* font-size:22px; */
-    background-color: rgb(79, 209, 27);
+    background-color: rgb(9, 147, 9);
     font-size: 13px;
 }
 
 /* navbar */
 .btn-cick {
-    background-color: rgb(79, 209, 27);
+    background-color: rgb(9, 147, 9);
     font-size: 13px;
     position: relative;
 }
@@ -179,27 +179,58 @@
 /* navbar megaMenu */
 .Hover-position-menu {
     position: absolute;
-    background-color: blue;
     z-index: 5;
     top: 70px;
     width: 100vw;
     left:-100px;
 
 }
-.menu-button {
-    color: rgb(79, 209, 27);
+.menu-lineheight {
+    line-height: 28px;
 }
-.menu-img {
-    /* background-size: cover; */
-    background-color: aquamarine;
-display: inline-block;
-padding: 10px;
+
+.menu-lineheight button {
+    font-weight: 500;
+    font-family: sans-serif;
+    color: rgb(33, 49, 60);
+    font-size: 14px;
+
+
 
 }
+.menu-button {
+    color: rgb(9, 147, 9);
+    font-weight: 500;
+    font-size: 14px;
+
+}
+/* .menu-img {
+    /* background-size: cover; */
+    /* background-color: aquamarine;
+display: inline-block;
+padding: 10px; */
+
+/* }  */
 
 .menu-img img {
-    height: 100px;
-    width: 100px;
+    height: 330px;
+}
+.menu-btn-bg {
+    background-color: rgb(9, 147, 9);
+}
+
+.menu-img-color {
+    line-height: 15px;
+}
+.menu-img-color p {
+    background-color: rgb(255, 191, 6);
+    border-radius: 50%;
+    font-weight: 600;
+}
+.menu-title {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
 }
 
 /* pages */
@@ -266,7 +297,7 @@ padding: 10px;
 }
 
 .para-txt p:hover {
-    color: rgb(79, 209, 27);
+    color: rgb(9, 147, 9);
     cursor: pointer;
 }
 
