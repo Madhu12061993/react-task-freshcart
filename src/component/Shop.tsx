@@ -4,13 +4,6 @@ import './css/PopularProducts.css'
 
 const Shop = () => {
   return (
-    // <div className='d-flex'>
-    //     <img src={vegetable} alt='vegtable' className='w-50'/>
-    //     <img src={bun} alt='bun' className='w-50'/>
-
-    // </div>
-
-    
     <>
       <div className='row row-cols-1 row-cols-md-2 my-5'>
         <div className="card border-0 ">

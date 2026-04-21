@@ -1,18 +1,19 @@
 import slideOne from '../assets/slide-1.jpg';
 import slideTwo from '../assets/slide-2.jpg';
+import './css/PopularProducts.css';
 
 const data = [
   {
-    title: "Super Market For Grocery",
-    subTitle: "hkckhd",
+    title: "SuperMarket For Fresh Grocery",
+    subTitle: "Introduced a new model for online grocery and convenient home delivery",
     imageUrl: slideOne,
-    LabelText: "bhdbhkd"
+    LabelText: "Opening Sale Discount 50%",
   },
   {
-    title: "Super Market For Grocery",
-    subTitle: "hkckhd",
+    title: "Free Shipping on orders over $100",
+    subTitle: "Free Shipping to First-Time Customers Only, After promotions and discounts are applied.",
     imageUrl: slideTwo,
-    LabelText: "bhdbhkd"
+    LabelText: "Free Shipping - orders over $100"
   }
 ];
 
@@ -20,16 +21,16 @@ const Carousal = () => {
   return (
     <div
       id="carouselExampleSlidesOnly"
-      className ="carousel slide mt-4"
-      data-bs-ride ="carousel"
+      className="carousel slide mt-4"
+      data-bs-ride="carousel"
     >
       <div className="carousel-inner">
-        {data.map((item, index) => (
+        {data.map((item, index) => (  
           <div
             key={index}
             className={`carousel-item ${index === 0 ? "active" : ""}`}
           >
-            <div className="card text-bg-dark border-0">
+            <div className="card  bg-dark border-0">
               <img
                 src={item.imageUrl}
                 className="d-block w-100"
@@ -37,11 +38,11 @@ const Carousal = () => {
               />
             </div>
 
-            <div className="card-img-overlay">
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p className="card-text"><small>Last updated 3 mins ago</small></p>
+            <div className="card-img-overlay overlayPositin">
+              <p className="card-text bg-warning d-inline p-1 pt-0 fw-bold rounded-1 label-font">{item.LabelText}</p>
+              <p className="card-title fs-1 fw-bold" >{item.title}</p>
+              <p className="card-text fs-5 text-muted  ">{item.subTitle}</p>
+              <button className='text-white bg-dark p-2 rounded-3 px-3 fw-bold'> <small>Shop Now <i className="bi bi-arrow-right-short"></i></small> </button>
             </div>
           </div>
 
