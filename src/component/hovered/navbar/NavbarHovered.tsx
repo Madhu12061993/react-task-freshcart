@@ -202,7 +202,7 @@ export const MegaMenu = () => {
               ))}
             </div>
             <div className="col menu-img mt-4">
-              <div className="card bg-dark text-white border-0 ">
+              <div className="card  text-white border-0 ">
                 <img src={vegetableBasket} className="card-img" alt="vegetableBasket" />
                 <div className="card-img-overlay d-flex justify-content-between mt-3 mx-2">
                   <div>

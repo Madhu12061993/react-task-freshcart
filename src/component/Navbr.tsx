@@ -4,86 +4,88 @@ import NavbarHovered, { Account, Docs, Home, MegaMenu, Pages, Shop, Stores } fro
 
 
 const Navbr = () => {
-    const [isHovered, setisHovered] = useState(false);
+    const [activeMenu, setactiveMenu] = useState<string | null>(null);
     return (
         <nav className="navbar navbar-light  ">
             <div className="container-fluid d-flex flex-row justify-content-start gap-1">
 
-                <button
-                    className={`navbar-brand fs-6 btn-cick text-white d-flex gap-2 px-4 py-2 rounded-3 border-0  ${isHovered ? "bg-success" : ""}`}
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                <a
+                    className={`navbar-brand fs-6 btn-cick text-white d-flex gap-2 px-4 py-2 rounded-3 border-0  ${activeMenu === "Departments" ? "bg-success" : ""}`}
+                    onMouseEnter={() => setactiveMenu("Departments")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <i className="bi bi-ui-checks-grid"></i>
                     All Departments
-                    {isHovered && <div className='hover-position'><NavbarHovered /></div>}
-                </button>
+                    {activeMenu === "Departments" && <div className='hover-position'><NavbarHovered /></div>}
+                </a>
                 <a className="navbar-brand " hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("home")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Home</span>
-                        
+                        <span className={`${activeMenu === "home" ? "hoverMenu" : ""}`}>Home</span>
+
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-home '> <Home /> </div>}
+                        {activeMenu === "home" && <div className='Hover-position-home '> <Home /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("shop")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Shop</span>
-                        
+                        <span className={`${activeMenu === "shop" ? "hoverMenu" : ""}`}>Shop</span>
+
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-shop '> <Shop/> </div>}
+                        {activeMenu === "shop" && <div className='Hover-position-shop '> <Shop /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("store")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Stores</span>
-                        
+                        <span className={`${activeMenu === "store" ? "hoverMenu" : ""}`}>Stores</span>
+
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-store '> <Stores /> </div>}
+                        {activeMenu === "store" && <div className='Hover-position-store '> <Stores /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("mega")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}> Mega menu</span>                       
+                        <span className={`${activeMenu === "mega" ? "hoverMenu" : ""}`}> Mega menu</span>
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-menu'> <MegaMenu /> </div>}
+                        {activeMenu === "mega" && <div className='Hover-position-menu'> <MegaMenu /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("page")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Pages</span>
+                        <span className={`${activeMenu === "page" ? "hoverMenu" : ""}`}>Pages</span>
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-page '> <Pages /> </div>}
+                        {activeMenu === "page" && <div className='Hover-position-page '> <Pages /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("account")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges '>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Account</span>                        
+                        <span className={`${activeMenu === "account" ? "hoverMenu" : ""}`}>Account</span>
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-account '> <Account/> </div>}
+                        {activeMenu === "account" && <div className='Hover-position-account '> <Account /> </div>}
                     </span>
                 </a>
-                <a className="navbar-brand fonts-badges" href="#">
-                    <span className='fonts-badges'>Dashboard</span>
+                <a className="navbar-brand fonts-badges" href="#"
+                    onMouseEnter={() => setactiveMenu("dash")}
+                    onMouseLeave={() => setactiveMenu(null)} >
+                    <span className={` fonts-badges ${activeMenu === "dash" ? "hoverMenu" : ""}`}>Dashboard</span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"
-                    onMouseEnter={() => setisHovered(true)}
-                    onMouseLeave={() => setisHovered(false)} >
+                    onMouseEnter={() => setactiveMenu("docs")}
+                    onMouseLeave={() => setactiveMenu(null)} >
                     <span className='fonts-badges'>
-                        <span className={`${isHovered ? "text-success" : ""}`}>Docs</span>
-                        </span>
-                    {isHovered && <div className='Hover-position-doc '> <Docs /> </div>}
+                        <span className={`${activeMenu === "docs" ? "hoverMenu" : ""}`}>Docs</span>
+                    </span>
+                    {activeMenu === "docs" && <div className='Hover-position-doc '> <Docs /> </div>}
                 </a>
             </div>
         </nav>

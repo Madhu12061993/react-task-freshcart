@@ -232,6 +232,10 @@ padding: 10px; */
     line-height: 23px;
     font-weight: 700;
 }
+/* all hover color */
+.hoverMenu {
+    color: rgb(9, 147, 9);
+}
 
 /* pages */
  .Hover-position-page {
@@ -275,6 +279,8 @@ padding: 10px; */
 
 .fonts-badges {
     font-size: 14px;
+    font-weight: 600;
+    color: rgb(63, 64, 65);
 
 }
 

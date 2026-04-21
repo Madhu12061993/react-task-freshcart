@@ -62,10 +62,10 @@ const dataArr = (arr: Carousal[], size: number) => {
   const result: Carousal[][] = [];
   for (let i = 0; i < arr.length; i += size) {
     let chunk = arr.slice(i, i + size);
-    
+
     if (chunk.length < size && result.length > 0) {
       const prev = result[result.length - 1];
-      chunk = [...prev.slice(size-(size-chunk.length)) , ...chunk];
+      chunk = [...prev.slice(size - (size - chunk.length)), ...chunk];
     }
     result.push(chunk);
   }
@@ -74,7 +74,7 @@ const dataArr = (arr: Carousal[], size: number) => {
 
 const groupData = dataArr(datas, 4);
 const FeatureCarousal = () => {
-  const [isHovered , setisHovered] = useState(false);
+  const [isHovered, setisHovered] = useState<number | null>(null);
   return (
     <>
 
@@ -86,19 +86,23 @@ const FeatureCarousal = () => {
 
               <div key={i} className={`carousel-item ${i === 0 ? "active" : ""} `}>
                 <div className='row row-cols-1 row-cols-md-4  '>
-                  {group.map((item, index) => (
-                    <div key={index} className="col">
-                      <div className={`card ${isHovered ? "border-success" : ""}`}
-                       onMouseEnter={() => setisHovered(true)} 
-                       onMouseLeave={() => setisHovered(false)}>
-                        <figure className="figure text-center ">
-                          <img src={item.imagUrl} className="figure-img img-fluid rounded" alt={item.title} />
-                          <figcaption className="figure-caption">{item.title}</figcaption>
-                        </figure>
-                      </div>
+                  {group.map((item, index) => {
+                    const UniqueIndex = i * 4 + index;
+                    return (
+                      <div key={UniqueIndex} className="col">
+                        <div className={`card ${isHovered === UniqueIndex ? "border-success" : ""}`}
+                          onMouseEnter={() => setisHovered(UniqueIndex)}
+                          onMouseLeave={() => setisHovered(null)}>
+                          <figure className="figure text-center ">
+                            <img src={item.imagUrl} className="figure-img img-fluid rounded" alt={item.title} />
+                            <figcaption className="figure-caption">{item.title}</figcaption>
+                          </figure>
+                        </div>
 
-                    </div>
-                  ))}
+                      </div>
+                    );
+
+                  })}
                 </div>
               </div>
 
