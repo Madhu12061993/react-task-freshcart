@@ -53,7 +53,7 @@ const Navbr = () => {
                     <span className='fonts-badges'>
                         <span className={`${isHovered ? "text-success" : ""}`}> Mega menu</span>                       
                         <i className="bi bi-chevron-down ms-2"></i>
-                        {isHovered && <div className='Hover-position-home '> <MegaMenu /> </div>}
+                        {isHovered && <div className='Hover-position-menu'> <MegaMenu /> </div>}
                     </span>
                 </a>
                 <a className="navbar-brand fonts-badges" hovering-position href="#"

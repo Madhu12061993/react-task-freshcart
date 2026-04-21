@@ -1,5 +1,8 @@
 import { useState } from "react"
 import "../../css/PopularProducts.css";
+import vegetableBasket from "../../../assets/navhover/basket-full-vegetables.jpg";
+
+
 const department = [
   "Dairy, Bread & Eggs",
   "Snacks & Munchies",
@@ -50,6 +53,37 @@ const account = [
   "Signup",
   "Forgot Password",
   "My Account",
+];
+const menuEggs = [
+  "Butter",
+  "Milk Drinks",
+  "Curd & Yogurt",
+  "Eggs",
+  "Buns & Bakery",
+  "Cheese",
+  "Condensed Milk",
+  "Dairy Products",
+];
+
+const menuBreakfast = [
+  " Breakfast Cereal",
+  "Noodles, Pasta & Soup",
+  "Frozen Veg Snacks",
+  "Frozen Non-Veg Snacks",
+  "Vermicelli",
+  "Instant Mixes",
+  "Batter",
+  "Fruit and Juices",
+];
+const menuDrinks = [
+  " Soft Drinks",
+  "Fruit Juices",
+  "Coldpress",
+  "Water & Ice Cubes",
+  "Soda & Mixers",
+  "Health Drinks",
+  "Herbal Drinks",
+  "Milk Drinks",
 ];
 
 const NavbarHovered = () => {
@@ -133,13 +167,41 @@ export const Stores = () => {
 };
 
 export const MegaMenu = () => {
+  const [isHovered, setisHovered] = useState(false);
+
   return (
     <>
-      <div className="container-fluid bg-info">
-        <div>sdd</div>
-        <div>ss</div>
-        <div>ss</div>
-        <div>ss</div>
+      <div className="container-fluid bg-info d-flex justify-content-between "
+        onMouseEnter={() => setisHovered(true)}
+        onMouseLeave={() => setisHovered(false)}>
+        <div className="col mt-4">
+          <button className="border-0 menu-button">Dairy, Bread & Eggs</button>
+          {menuEggs.map((item, index) => (
+            <div>
+              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
+            </div>
+          ))}
+
+        </div>
+        <div className="col mt-4">
+          <button className="border-0 menu-button">Breakfast & Instant Food</button>
+          {menuBreakfast.map((item, index) => (
+            <div>
+              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
+            </div>
+          ))}
+        </div>
+        <div className="col mt-4">
+          <button className="border-0 menu-button">Cold Drinks & Juices</button>
+          {menuDrinks.map((item, index) => (
+            <div>
+              <button key={index} className={`border-0 ${isHovered ? "text-success" : ""}`}>{item}</button>
+            </div>
+          ))}
+        </div>
+        <div className="col menu-img">
+          <img src={vegetableBasket} alt="vegetableBasket" />
+        </div>
       </div>
     </>
   );

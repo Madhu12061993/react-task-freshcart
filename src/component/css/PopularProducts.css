@@ -177,14 +177,30 @@
 }
 
 /* navbar megaMenu */
-/* .Hover-position-store {
+.Hover-position-menu {
     position: absolute;
     background-color: blue;
-    z-index: 2;
-    top: 50px;
-    width: 170px;
+    z-index: 5;
+    top: 70px;
+    width: 100vw;
+    left:-100px;
 
-} */
+}
+.menu-button {
+    color: rgb(79, 209, 27);
+}
+.menu-img {
+    /* background-size: cover; */
+    background-color: aquamarine;
+display: inline-block;
+padding: 10px;
+
+}
+
+.menu-img img {
+    height: 100px;
+    width: 100px;
+}
 
 /* pages */
  .Hover-position-page {
