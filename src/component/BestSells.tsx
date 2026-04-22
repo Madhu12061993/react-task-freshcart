@@ -69,7 +69,7 @@ const data = [
 
 ]
 const BestSells = () => {
-  const [isHovered, setisHovered] = useState(false);
+  const [isHovered, setisHovered] = useState<number | null>(null);
   return (
     <>
       <div className='best-sell'>
@@ -90,10 +90,10 @@ const BestSells = () => {
                 </div>
               ) : (
                 <div className=''
-                  onMouseEnter={() => setisHovered(true)}
-                  onMouseLeave={() => setisHovered(false)}>
-                  {isHovered === true ? (
-                  <div className='card h-100 rounded-3 border border-success card-index'>
+                  onMouseEnter={() => setisHovered(index)}
+                  onMouseLeave={() => setisHovered(null)}>
+                  {isHovered === index ? (
+                  <div className='card h-100 rounded-3 border border-success card-index hover-shadow'>
                       <img src={item.imgUrl} className="card-img-top m-0 " alt="groundcoffee" />
                       <BestSellHovered/>
                       <div className="card-body  m-0">

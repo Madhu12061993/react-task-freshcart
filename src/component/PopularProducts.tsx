@@ -108,7 +108,7 @@ const data = [
     },
 ]
 const PopularProducts = () => {
-    const [isHovered, setisHovered] = useState(false);
+    const [isHovered, setisHovered] = useState<number |null>(null);
     return (
         <>
             <div className='my-5 pt-5'>
@@ -117,10 +117,10 @@ const PopularProducts = () => {
                     {/* col-1-sev */}
                     {data.map((item, index) => (
                         <div key={index} className="col "
-                            onMouseEnter={() => setisHovered(true)}
-                            onMouseLeave={() => setisHovered(false)}>
-                            {isHovered === true ? (
-                                <div className="card  rounded-3 border border-success">
+                            onMouseEnter={() => setisHovered(index)}
+                            onMouseLeave={() => setisHovered(null)}>
+                            {isHovered === index ? (
+                                <div className="card  rounded-3 border border-success hover-shadow">
                                     <div className='w-100 d-block ' >
                                         <span className=' badge bg-danger stale '>{item.text}</span>
                                         <PopularProductsHovered />
@@ -176,26 +176,6 @@ const PopularProducts = () => {
 
 export default PopularProducts;
 
-//  <div className="card  rounded-3">
-//                                 <div className='w-100 d-block ' >
-//                                     <span className=' badge bg-danger stale '>{item.text}</span>
-//                                 </div>
-//                                 <img src={item.imgUrl} className="card-img-top m-0 imgSize " alt="sev" />
-//                                 <div className="card-body  m-0">
-//                                     <p className="card-text text-muted m-0 fontChange" >{item.subTitle}</p>
-//                                     <p className="card-title text-bold fw-bolder fontChange body m-0 ">{item.title}</p>
-//                                     <p className='mt-2 fontChange'><i className="bi bi-star-fill text-warning "></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <i className="bi bi-star-fill text-warning"></i> <span className='text-muted'>{item.starValue}</span> </p>
-//                                     <div className='d-flex justify-content-between '>
-//                                         <div>
-//                                             <span className='fw-bolder fontChange'><i className="bi bi-currency-dollar"></i>{item.dallarValue}</span>
-//                                             {item.dallarNumber ? <span className='text-muted m-0 fontChange'><i className="bi bi-currency-dollar "></i>{item.dallarNumber}</span> : ""}
-//                                         </div>
-//                                         <div>
-//                                             <button className='addbtn m-0 text-white fw-800'> <i className="bi bi-plus"></i> {item.button}</button>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </div>
 
 
 

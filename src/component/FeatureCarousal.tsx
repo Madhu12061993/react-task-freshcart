@@ -90,7 +90,7 @@ const FeatureCarousal = () => {
                     const UniqueIndex = i * 4 + index;
                     return (
                       <div key={UniqueIndex} className="col">
-                        <div className={`card ${isHovered === UniqueIndex ? "border-success" : ""}`}
+                        <div className={`card  ${isHovered === UniqueIndex ? "border-success hover-shadow" : ""}`}
                           onMouseEnter={() => setisHovered(UniqueIndex)}
                           onMouseLeave={() => setisHovered(null)}>
                           <figure className="figure text-center ">
